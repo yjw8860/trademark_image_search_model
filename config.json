@@ -1,0 +1,51 @@
+{
+    "model" : {
+        "backend":              "Tiny Yolo",
+        "input_size":           416,
+        "anchors":              [0.57273, 0.677385, 1.87446, 2.06253, 3.33843, 5.47434, 7.88282, 3.52778, 9.77052, 9.16828],
+        "max_box_per_image":    1,
+        "labels":               ["symbol"]
+    },
+
+    "train": {
+        "train_image_folder":   "./data/object_dectection_yolo_v2/img/concat/train/",
+        "train_annot_folder":   "./data/object_dectection_yolo_v2/annotation/train/",
+          
+        "train_times":          1,
+        "pretrained_weights":   "./net/tiny_yolo_backend.h5",
+        "batch_size":           16,
+        "learning_rate":        0.00001,
+        "nb_epochs":            5,
+        "warmup_epochs":        0,
+
+        "object_scale":         5.0 ,
+        "no_object_scale":      1.0,
+        "coord_scale":          1.0,
+        "class_scale":          1.0,
+
+        "saved_weights_name":   "./net/tiny_yolo_backend_trained.h5",
+        "debug":                true
+    },
+
+    "valid": {
+        "valid_image_folder":   "./data/object_dectection_yolo_v2/img/concat/test/",
+        "valid_annot_folder":   "./data/object_dectection_yolo_v2/annotation/test/",
+
+        "valid_times":          1
+    },
+    "data": {
+        "character_img_folder":       "./data/object_dectection_yolo_v2/img/character/",
+        "character_crop_img_folder":  "./data/object_dectection_yolo_v2/img/character_crop/",
+        "symbol_img_folder":          "./data/object_dectection_yolo_v2/img/symbol/",
+        "concat_img_folder":          "./data/object_dectection_yolo_v2/img/concat/",
+        "annotation_folder":          "./data/object_dectection_yolo_v2/annotation/"
+    },
+    "application":{
+        "img_folder":               "./data/retrieval/img/symbol_and_character/",
+        "query_img_folder":         "./data/retrieval/img/query/",
+        "ground_truth_folder":      "./data/retrieval/img/ground_truth/",
+        "trained_weights":          "./net/tiny_yolo_600_epochs.h5",
+        "feature_map_path":         "./data/feature_map/feature_map.npy",
+        "retrieval_result_folder" : "./retrieval_result/"
+    }
+}

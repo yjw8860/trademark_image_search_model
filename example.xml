@@ -1,0 +1,1 @@
+<annotation><filename>example.jpg</filename><path>./example.jpg</path><size><width>1752</width><height>1001</height></size><object><name>symbol</name><bndbox><xmin>33</xmin><ymin>330</ymin><xmax>1685</xmax><ymax>990</ymax></bndbox></object></annotation>

@@ -6,3 +6,5 @@ trained model link : https://drive.google.com/open?id=1QQCwZ1t4PQvKrg6TtOYkM7gzC
 
 모형의 학습은 yolo_v2_train.py, 학습이 완료된 모형을 통한 이미지 검색은 application.py를 실행하면 됩니다.
 
+해당 코드는 https://github.com/experiencor/keras-yolo2 를 참고하여 작성된 코드입니다.
+
